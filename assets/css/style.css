@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.custom-navbar {
+    background-color: #253444;
+}
+
+.custom-navbar__list {
+    color: white;
+    font-size: 14px;
+}
+
+.custom-navbar__list li {
+    margin-right: 24px !important;
+}
+
+.custom-navbar__list li:last-child {
+    margin-right: 0 !important;
+}
+
+.custom-navbar__list li a {
+    display: inline-block;
+    padding: 12px 0;
+    transition: .15s;
+}
+
+.custom-navbar__list li a:hover {
+    color: #ff003c !important;
+}
+
+.user-bar {
+    background-color: #FF003C;
+    padding: 16px 0;
+}
+
+.user-bar__logo img {
+    max-width: 100%;
+}
+
+.user-bar__input {
+    border: none;
+    border-radius: 3px;
+    height: 45px;
+    padding: 15px 40px 15px 10px;
+    position: relative;
+    width: 100%;
+    outline: 0;
+}
+
+.user-bar__input--iconless {
+    padding: 15px 10px;
+}
+
+.user-bar__form {
+    position: relative;
+}
+
+.user-bar__search-icon {
+    position: absolute;
+    top: 50%;
+    border: 0;
+    box-shadow: none;
+    background: none;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.target {
+    height: 40px;
+    width: 250px;
+    background-color: #477774;
+    /* transition: opacity 4s, background-color 1s, transform 1s cubic-bezier(.35, .72, .42, .83); */
+    /* transition: .2s; */
+    animation-name: fromLeftToRight;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.custom-image {
+    transition: .2s;
+}
+
+.custom-image:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    overflow: hidden;
+}
+
+.heart {
+    max-width: 100%;
+    animation-name: heartBeat;
+    animation-duration: .75s;
+    animation-timing-function: cubic-bezier(.08,.33,.83,.5);
+    animation-iteration-count: infinite;
+}
+
+@keyframes fromLeftToRight {
+    0% {
+        transform: translateX(0);
+    } 90% {
+        transform: translateX(250px);
+    } 100% {
+        transform: translateX(350px);
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.5);
+    } 100% {
+        transform: scale(1);
+    }
+}
+
+.solar-system__container {
+    background: url("https://wallpaperaccess.com/full/1314309.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.galaxy-item {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.galaxy-item--sun {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(orangered, yellow);
+    box-shadow: 0px 0px 20px 0 yellow;
+}
+
+.galaxy-item--mercury {
+    width: 17px;
+    height: 17px;
+    background: radial-gradient(#555, #888);
+    transform: translateY(60px);
+    animation-name: mercury;
+    animation-duration: 6.25s;
+    margin: -8px;
+}
+
+.galaxy-item--mars {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(#A83408, #BD4C21);
+    transform: translateY(200px);
+    margin: -10px;
+    animation-name: mars;
+    animation-duration: 12.5s;
+}
+
+.galaxy-item--venus {
+    width: 23px;
+    height: 23px;
+    background: linear-gradient(#89610A, #AE842A);
+    transform: translateY(100px);
+    margin: -11px;
+    animation-name: venus;
+    animation-duration: 8.5s;
+}
+
+.galaxy-item--earth {
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(#2A9EAE, #46BACA);
+    transform: translateY(150px);
+    margin: -13px;
+    animation-name: earth;
+    animation-duration: 10s;
+}
+
+.galaxy-item--neptune {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(#185585, #3275AA);
+    transform: translateY(440px);
+    margin: -15px;
+    animation-name: neptune;
+    animation-duration: 55.5s;
+}
+
+.galaxy-item--uranus {
+    width: 33px;
+    height: 33px;
+    background: linear-gradient(#7AC2BA, #65D1C5);
+    transform: translateY(380px);
+    margin: -16px;
+    animation-name: uranus;
+    animation-duration: 43.5s;
+}
+
+.galaxy-item--saturn {
+    width: 39px;
+    height: 39px;
+    background: linear-gradient(#B8A71B, #C4B328);
+    transform: translateY(320px);
+    margin: -19px;
+    animation-name: saturn;
+    animation-duration: 31.3s;
+}
+
+.galaxy-item--saturn::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -4px;
+    width: 120%;
+    height: 13px;
+    background-color: transparent;
+    border: 3px solid #c6c8bb;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+
+.galaxy-item--jupiter {
+    width: 41px;
+    height: 41px;
+    background: linear-gradient(#CE9C0D, #CCA32C);
+    transform: translateY(260px);
+    margin: -20px;
+    animation-name: jupiter;
+    animation-duration: 23.3s;
+}
+
+@keyframes mercury {
+    from {
+        transform: rotate(0) translateY(60px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(60px) translateX(-50%);
+    }
+}
+
+@keyframes venus {
+    from {
+        transform: rotate(0) translateY(100px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(100px) translateX(-50%);
+    }
+}
+
+@keyframes earth {
+    from {
+        transform: rotate(0) translateY(150px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(150px) translateX(-50%);
+    }
+}
+
+@keyframes mars {
+    from {
+        transform: rotate(0) translateY(200px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(200px) translateX(-50%);
+    }
+}
+
+@keyframes jupiter {
+    from {
+        transform: rotate(0) translateY(260px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(260px) translateX(-50%);
+    }
+}
+
+@keyframes saturn {
+    from {
+        transform: rotate(0) translateY(320px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(320px) translateX(-50%);
+    }
+}
+
+@keyframes uranus {
+    from {
+        transform: rotate(0) translateY(380px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(380px) translateX(-50%);
+    }
+}
+
+@keyframes neptune {
+    from {
+        transform: rotate(0) translateY(440px) translateX(-50%);
+    } to {
+        transform: rotate(360deg) translateY(440px) translateX(-50%);
+    }
+}
